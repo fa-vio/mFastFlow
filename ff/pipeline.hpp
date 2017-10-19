@@ -35,7 +35,9 @@
 #include <ff/svector.hpp>
 #include <ff/fftree.hpp>
 #include <ff/node.hpp>
+#if defined(FF_OPENCL)
 #include <ff/ocl/clEnvironment.hpp>
+#endif
 #if defined(MAMMUT)
 #include <mammut/mammut.hpp>
 #endif
