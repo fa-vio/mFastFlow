@@ -411,12 +411,14 @@ public:
             }
             barrier->barrierSetup(nthreads);
 
+#if defined(FF_OPENCL)
             // REMOVE THIS ?
             // check if we have to setup the OpenCL environment !
             if (fftree_ptr->hasOpenCLNode()) {
                 // setup openCL environment
                 clEnvironment::instance();
             }
+#endif
 
         }
         if (!prepared) if (prepare()<0) return -1;
