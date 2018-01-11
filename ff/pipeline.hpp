@@ -418,7 +418,7 @@ public:
                 // setup openCL environment
                 clEnvironment::instance();
             }
-#endif
+#endif            
 
         }
         if (!prepared) if (prepare()<0) return -1;
